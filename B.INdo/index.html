@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kuis Teks Eksposisi</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Link ke File CSS External -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="quiz-container">
+        <!-- Header -->
+        <div class="quiz-header">
+            <h1>Kuis Teks Eksposisi</h1>
+            <p>Uji pemahamanmu tentang struktur, ciri, dan kaidah bahasa teks eksposisi!</p>
+        </div>
+
+        <!-- Progress Bar -->
+        <div class="progress-bar-container">
+            <div class="progress-info">
+                <span id="question-count">Soal 1 dari 5</span>
+                <span id="progress-percent">0%</span>
+            </div>
+            <div class="progress-bar">
+                <div class="progress-fill" id="progress-fill"></div>
+            </div>
+        </div>
+
+        <!-- Box Pertanyaan -->
+        <div id="quiz-box">
+            <div class="question-title" id="question-text">
+                Pertanyaan akan dimuat di sini...
+            </div>
+
+            <!-- Pilihan Jawaban A-E -->
+            <div class="options-container" id="options-container">
+                <!-- Opsi diproduksi dinamis via JS -->
+            </div>
+
+            <!-- Kotak Penjelasan/Pembahasan (Muncul Instan Setelah Diperiksa) -->
+            <div class="explanation-box" id="explanation-box">
+                <div class="explanation-title" id="explanation-title">
+                    <span id="explanation-icon"></span>
+                    <span id="explanation-text-title">Pembahasan</span>
+                </div>
+                <div id="explanation-content"></div>
+            </div>
+
+            <!-- Footer & Tombol Lanjut -->
+            <div class="quiz-footer">
+                <div class="note">* Pilih salah satu jawaban untuk melihat umpan balik langsung.</div>
+                <button id="next-btn" class="btn" disabled>Soal Selanjutnya &rarr;</button>
+            </div>
+        </div>
+
+        <!-- Layar Hasil Akhir -->
+        <div id="result-box" class="result-container hidden">
+            <div class="score-badge" id="score-badge">100</div>
+            <h2 id="result-title">Luar Biasa!</h2>
+            <p id="result-desc">Kamu memiliki pemahaman yang sangat baik tentang materi Teks Eksposisi.</p>
+
+            <div class="result-stats">
+                <div class="stat-item correct">
+                    <div class="stat-value" id="correct-count">0</div>
+                    <div class="stat-label">Jawaban Benar</div>
+                </div>
+                <div class="stat-item wrong">
+                    <div class="stat-value" id="wrong-count">0</div>
+                    <div class="stat-label">Jawaban Salah</div>
+                </div>
+            </div>
+
+            <button id="restart-btn" class="btn btn-restart">Ulangi Kuis</button>
+        </div>
+    </div>
+
+    <!-- Link ke File JavaScript External -->
+    <script src="script.js"></script>
+</body>
+</html>
